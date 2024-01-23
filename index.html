@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Feedback</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1 class="heading">Product Feedback</h1>
+      <form id="feedbackForm">
+        <!-- Emotions in a single line -->
+        <div class="ratings-container" id="ratings-container">
+          <div class="rating" onclick="setRating('Unhappy')">
+            <img src="https://cdn-icons-png.flaticon.com/512/166/166527.png" />
+            <figcaption><b>Unhappy</b></figcaption>
+          </div>
+          <div class="rating" onclick="setRating('Neutral')">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1791/1791385.png"
+            />
+            <figcaption><b>Neutral</b></figcaption>
+          </div>
+          <div class="rating" onclick="setRating('Satisfied')">
+            <img src="https://cdn-icons-png.flaticon.com/512/166/166538.png" />
+
+            <figcaption><b>Satisfied</b></figcaption>
+          </div>
+          <div class="rating great-rating" onclick="setRating('Great')">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/4160/4160724.png"
+            />
+            <figcaption><b>Great</b></figcaption>
+          </div>
+        </div>
+
+        <!-- Your Designation -->
+        <div class="designation-container">
+          <label for="designation"><b>Your Designation:</b></label>
+          <input
+            type="text"
+            id="designation"
+            name="designation"
+            placeholder="Product Manager"
+            required
+          />
+        </div>
+
+        <!-- Write Suggestions -->
+        <div class="suggestions-container">
+          <label for="msg"><b>Write your Suggestions:</b></label>
+          <textarea id="msg" name="msg" rows="4" cols="10" required></textarea>
+        </div>
+
+        <!-- Stakeholder Type -->
+        <div class="stakeholder-type">
+          <label for="stakeholderType"><b>Stakeholder Type:</b></label>
+          <select id="stakeholderType" name="stakeholderType">
+            <option value="internal">Internal</option>
+            <option value="external">External</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn" id="btn" onclick="submitFeedback()">
+          Submit Feedback
+        </button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
